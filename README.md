@@ -1,5 +1,31 @@
 # UserDashboard
 
+This is a simple Angular-based user dashboard application that includes features such as a dynamic form for adding users, a pie chart for role distribution, and pagination for displaying a list of users.
+
+Features
+
+Lazy-loaded User Form: Dynamically load a form to add new users.
+
+Role Distribution Chart: Displays the role distribution of users in a pie chart using Chart.js.
+
+Pagination: Implements ngx-pagination for paginated display of users.
+
+Modular Code: The application is designed using standalone components in Angular for better modularity and performance.
+
+Technologies Used
+
+Angular (Version 19)
+
+RxJS: Reactive programming for asynchronous operations.
+
+Ngx Pagination: For paginated content.
+
+Chart.js: For rendering charts.
+
+TypeScript: Strongly typed programming for better maintainability.
+
+SCSS: For styling.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
 
 ## Development server
