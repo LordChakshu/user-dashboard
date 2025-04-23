@@ -1,0 +1,46 @@
+<div class="add-user-container" *ngIf="showForm">
+    <div class="header">
+        <h3>Add User</h3>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" class="add-user-form">
+        <div class="field-container">
+            <div class="field">
+                <label for="name">Name:</label>
+                <input type="text" id="name" [(ngModel)]="name" name="name" placeholder="Enter Name" />
+            </div>
+            <div *ngIf="submitted && errors.name" class="error">
+                {{ errors.name }}
+            </div>
+        </div>
+
+        <div class="field-container">
+            <div class="field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter E-mail" />
+            </div>
+            <div *ngIf="submitted && errors.email" class="error">
+                {{ errors.email }}
+            </div>
+        </div>
+
+        <div class="field-container">
+            <div class="field">
+                <label for="role">Role:</label>
+                <select id="role" [(ngModel)]="role" name="role">
+                    <option value="Admin">Admin</option>
+                    <option value="Editor">Editor</option>
+                    <option value="Viewer">Viewer</option>
+                </select>
+            </div>
+            <div *ngIf="submitted && errors.role" class="error">
+                {{ errors.role }}
+            </div>
+        </div>
+
+        <div class="btns">
+            <button type="submit">Add</button>
+            <button type="button" (click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+</div>

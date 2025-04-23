@@ -1,0 +1,44 @@
+.add-user-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 250px;
+  max-width: 450px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.header {
+  padding: 0px 25px;
+}
+.add-user-form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 10px;
+}
+.field-container {
+  display: flex;
+  flex-direction: column;
+}
+.field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+input {
+  width: 50%;
+}
+button {
+  width: 45%;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  display: flex;
+  justify-content: end;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

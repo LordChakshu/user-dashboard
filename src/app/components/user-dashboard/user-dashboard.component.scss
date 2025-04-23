@@ -1,0 +1,63 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.form{
+  display: flex;
+  justify-content: center;
+}
+.add-user-btn{
+    width: 48px;
+    background: #1c4980;
+    color:#ffffff;
+    align-items: center;
+    border-radius: 5px;
+}
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 25px;
+}
+@media (max-width: 768px) {
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  thead {
+    color: #000000;
+    text-align: left;
+    tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #ddd;
+      td {
+        padding: 15px;
+        font-size: 15px;
+        color: #000000;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<div class="dashboard">
+
+    <div class="header">
+        <h1>User Dashboard</h1>
+        <button class="add-user-btn" (click)="openUserForm()">Add User</button>
+        <ng-template #formContainer></ng-template>
+    </div>
+
+    <div class="content-container">
+        <div class="user-table-container" *ngIf="users$ | async as users">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users | paginate: { itemsPerPage: 5, currentPage: p }">
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.role }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ng-container *ngIf="users.length>5">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </ng-container>
+        </div>
+
+        <div class="chart-container" style="width: 300px; height: 300px;">
+            <canvas id="chartCanvas"></canvas>
+        </div>
+    </div>
+
+</div>

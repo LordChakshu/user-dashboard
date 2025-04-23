@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+::ng-deep .cdk-overlay-dark-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  ::ng-deep .cdk-global-overlay-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
